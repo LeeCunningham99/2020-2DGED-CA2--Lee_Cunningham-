@@ -183,7 +183,52 @@ static BACKGROUND_DATA = [
     actorType: ActorType.Background,
     layerDepth: 1,
     scrollSpeedMultiplier: 0.2
-  }
+  },
+
+  {
+    id: "background_3",
+      spriteSheet: document.getElementById("background3"),
+      sourcePosition: new Vector2(0, 0),
+      sourceDimensions: new Vector2(396, 512),
+      translation: new Vector2(0, 0),
+      rotation: 0,
+      scale: new Vector2(0.15, 0.3),
+      origin: new Vector2(-3800, -1900),
+      alpha: 1,
+      actorType: ActorType.Background,
+      layerDepth: 1,
+      scrollSpeedMultiplier: 0.2
+    },
+
+    {
+      id: "background_4",
+        spriteSheet: document.getElementById("background4"),
+        sourcePosition: new Vector2(0, 0),
+        sourceDimensions: new Vector2(190, 265),
+        translation: new Vector2(0, 0),
+        rotation: 0,
+        scale: new Vector2(0.05, 0.1),
+        origin: new Vector2(-9000, -6500),
+        alpha: 1,
+        actorType: ActorType.Background,
+        layerDepth: 1,
+        scrollSpeedMultiplier: 0.2
+      },
+
+      {
+        id: "background_5",
+          spriteSheet: document.getElementById("background5"),
+          sourcePosition: new Vector2(0, 0),
+          sourceDimensions: new Vector2(1210, 1591),
+          translation: new Vector2(0, 0),
+          rotation: 0,
+          scale: new Vector2(0.1, 0.2),
+          origin: new Vector2(-150, -3080),
+          alpha: 1,
+          actorType: ActorType.Background,
+          layerDepth: 1,
+          scrollSpeedMultiplier: 0.2
+        }
 
   
 ];
