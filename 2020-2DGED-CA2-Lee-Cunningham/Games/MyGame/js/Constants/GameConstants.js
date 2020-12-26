@@ -125,11 +125,12 @@ static COLLECTIBLES_ANIMATION_DATA = Object.freeze({
   }
 });
 
+//Snowy block
 static PLATFORM_DATA = Object.freeze({
   id: "platform",
-  spriteSheet: document.getElementById("spritesheet_jungle"),
-  sourcePosition: new Vector2(0, 112),
-  sourceDimensions: new Vector2(48, 48),
+  spriteSheet: document.getElementById("spritesheet_snowy"),
+  sourcePosition: new Vector2(89, 1),
+  sourceDimensions: new Vector2(39, 39),
   rotation: 0,
   scale: new Vector2(1, 1),
   origin: new Vector2(0, 0),
@@ -137,20 +138,50 @@ static PLATFORM_DATA = Object.freeze({
   actorType: ActorType.Platform,
   translationArray: [
     //added spaces here so that you can easily see which grouping is which on screen
-    new Vector2(100, 650),
-    new Vector2(150, 650),
-    new Vector2(200, 650),
+    //Snowy Hill
+    new Vector2(100, 725),
+    new Vector2(140, 685),
+    new Vector2(180, 645),
+    new Vector2(220, 685),
+    new Vector2(260, 685),
+    new Vector2(300, 725),
+    new Vector2(340, 725),
 
-    new Vector2(250, 600),
-    new Vector2(300, 600),
-
-    new Vector2(400, 550),
-    new Vector2(450, 550),    
+    //Platform
     new Vector2(500, 550),
     new Vector2(550, 550),  
 
     new Vector2(650, 500),
     new Vector2(700, 450),
+
+    //Floor so the player doesn't fall off the screen
+    new Vector2(0, 765),
+    new Vector2(39, 765),
+    new Vector2(78, 765),
+    new Vector2(117, 765),
+    new Vector2(156, 765),
+    new Vector2(195, 765),
+    new Vector2(234, 765),
+    new Vector2(273, 765),
+    new Vector2(312, 765),
+    new Vector2(351, 765),
+    new Vector2(390, 765),
+    new Vector2(429, 765),
+    new Vector2(468, 765),
+    new Vector2(507, 765),
+    new Vector2(546, 765),
+    new Vector2(585, 765),
+    new Vector2(624, 765),
+    new Vector2(663, 765),
+    new Vector2(702, 765),
+    new Vector2(741, 765),
+    new Vector2(780, 765),
+    new Vector2(819, 765),
+    new Vector2(854, 765),
+    new Vector2(897, 765),
+    new Vector2(936, 765),
+    new Vector2(975, 765),
+    new Vector2(1014, 765),
   ]
 });
 
@@ -228,7 +259,52 @@ static BACKGROUND_DATA = [
           actorType: ActorType.Background,
           layerDepth: 1,
           scrollSpeedMultiplier: 0.2
-        }
+        },
+
+        {
+          id: "background_6",
+            spriteSheet: document.getElementById("background6"),
+            sourcePosition: new Vector2(89, 45),
+            sourceDimensions: new Vector2(39, 39),
+            translation: new Vector2(0, 0),
+            rotation: 0,
+            scale: new Vector2(0.09, 0.09),
+            origin: new Vector2(-2300, -7800),
+            alpha: 1,
+            actorType: ActorType.Background,
+            layerDepth: 1,
+            scrollSpeedMultiplier: 0.2
+          },
+
+          {
+            id: "background_7",
+              spriteSheet: document.getElementById("background7"),
+              sourcePosition: new Vector2(89, 45),
+              sourceDimensions: new Vector2(39, 39),
+              translation: new Vector2(0, 0),
+              rotation: 0,
+              scale: new Vector2(0.09, 0.09),
+              origin: new Vector2(-1520, -7800),
+              alpha: 1,
+              actorType: ActorType.Background,
+              layerDepth: 1,
+              scrollSpeedMultiplier: 0.2
+            },
+
+            {
+              id: "background_8",
+                spriteSheet: document.getElementById("background8"),
+                sourcePosition: new Vector2(89, 45),
+                sourceDimensions: new Vector2(39, 39),
+                translation: new Vector2(0, 0),
+                rotation: 0,
+                scale: new Vector2(0.09, 0.09),
+                origin: new Vector2(-1520, -7600),
+                alpha: 1,
+                actorType: ActorType.Background,
+                layerDepth: 1,
+                scrollSpeedMultiplier: 0.2
+              }
 
   
 ];
