@@ -219,7 +219,7 @@ function LoadPlayerSprite() {
   );
 
   //step 5 - set performance characteristics of the body attached to the moveable sprite
-  playerSprite.Body.MaximumSpeed = 6;
+  playerSprite.Body.MaximumSpeed = 4;
   playerSprite.Body.Friction = FrictionType.Normal;
   playerSprite.Body.Gravity = GravityType.Normal;
 

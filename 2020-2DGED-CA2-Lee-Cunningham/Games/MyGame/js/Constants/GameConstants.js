@@ -6,14 +6,14 @@
 class SpriteData {
 
 //#region Sprite Data
-static RUNNER_START_POSITION = new Vector2(100, 575);
+static RUNNER_START_POSITION = new Vector2(100, 650);
 static RUNNER_MOVE_KEYS = [Keys.A, Keys.D, Keys.Space, Keys.Enter];
 static RUNNER_RUN_VELOCITY = 0.1;
-static RUNNER_JUMP_VELOCITY = 0.6;
+static RUNNER_JUMP_VELOCITY = 0.5;
 
 static RUNNER_ANIMATION_DATA = Object.freeze({
   id: "runner_animation_data",
-  spriteSheet: document.getElementById("spritesheet_main"),
+  spriteSheet: document.getElementById("CharacterSpriteSheet"),
   actorType: ActorType.Player,
   alpha: 1,
   takes: {  
@@ -21,36 +21,34 @@ static RUNNER_ANIMATION_DATA = Object.freeze({
       fps: 12,
       maxLoopCount: -1, //-1 = always, 0 = run once, N = run N times
       startCellIndex: 0,
-      endCellIndex: 8,
-      boundingBoxDimensions: new Vector2(49, 54), //notice I choose the largest of all the widths taken from the cellData array below
+      endCellIndex: 5,
+      boundingBoxDimensions: new Vector2(40, 60), //notice I choose the largest of all the widths taken from the cellData array below
       cellData: [
-        new Rect(414, 385, 47, 54),
-        new Rect(362, 385, 44, 54),
-        new Rect(314, 385, 39, 54),
-        new Rect(265, 385, 46, 54),
-        new Rect(205, 385, 49, 54),
-        new Rect(150, 385, 46, 54),
-        new Rect(96, 385, 46, 54),
-        new Rect(45, 385, 35, 54),
-        new Rect(0, 385, 35, 54)
+        new Rect(30, 110, 50, 70),
+        new Rect(95, 110, 50, 70),
+        new Rect(155, 110, 50, 70),
+        new Rect(210, 110, 50, 70),
+        new Rect(270, 110, 50, 70),
+        new Rect(330, 110, 50, 70)
+
+        //new Rect(96, 24, 46, 54),
+        //new Rect(45, 24, 35, 54),
+        //new Rect(0, 24, 35, 54)
       ]
     },
     "run_left" : {     
       fps: 12,
       maxLoopCount: -1, //-1 = always, 0 = run once, N = run N times
       startCellIndex: 0,
-      endCellIndex: 8,
-      boundingBoxDimensions: new Vector2(49, 54), //notice I choose the largest of all the widths taken from the cellData array below
+      endCellIndex: 5,
+      boundingBoxDimensions: new Vector2(40, 60), //notice I choose the largest of all the widths taken from the cellData array below
       cellData: [
-        new Rect(0, 305, 47, 54),
-        new Rect(55, 305, 44, 54),
-        new Rect(107, 305, 39, 54),
-        new Rect(152, 305, 46, 54),
-        new Rect(208, 305, 49, 54),
-        new Rect(265, 305, 46, 54),
-        new Rect(320, 305, 42, 54),
-        new Rect(380, 305, 35, 54),
-        new Rect(425, 305, 35, 54)
+        new Rect(30, 195, 50, 70),
+        new Rect(95, 195, 50, 70),
+        new Rect(155, 195, 50, 70),
+        new Rect(210, 195, 50, 70),
+        new Rect(270, 195, 50, 70),
+        new Rect(330, 195, 50, 70)
       ]
     }
   }
@@ -148,11 +146,28 @@ static PLATFORM_DATA = Object.freeze({
     new Vector2(340, 725),
 
     //Platform
+    new Vector2(300, 645),
+    new Vector2(375, 645),
+
+    new Vector2(450, 600),
     new Vector2(500, 550),
     new Vector2(550, 550),  
 
     new Vector2(650, 500),
     new Vector2(700, 450),
+    new Vector2(750, 450),
+    new Vector2(800, 500),
+    new Vector2(850, 550),
+    new Vector2(900, 600),
+    new Vector2(950, 550),
+
+    new Vector2(350, 500),
+    new Vector2(300, 400),
+    new Vector2(250, 500),
+    new Vector2(175, 500),
+    new Vector2(50, 400),
+    new Vector2(50, 600),
+
 
     //Floor so the player doesn't fall off the screen
     new Vector2(0, 765),
