@@ -6,7 +6,7 @@
 class SpriteData {
 
 //#region Sprite Data
-static RUNNER_START_POSITION = new Vector2(100, 650);
+static RUNNER_START_POSITION = new Vector2(90, 660);
 static RUNNER_MOVE_KEYS = [Keys.A, Keys.D, Keys.Space, Keys.Enter];
 static RUNNER_RUN_VELOCITY = 0.1;
 static RUNNER_JUMP_VELOCITY = 0.5;
@@ -76,7 +76,7 @@ static ENEMY_ANIMATION_DATA = Object.freeze({
 
 static COLLECTIBLES_ANIMATION_DATA = Object.freeze({
   id: "collectibles_animation_data",
-  spriteSheet: document.getElementById("spritesheet_main"),
+  spriteSheet: document.getElementById("spritesheet_snowy"),
   alpha: 1,
   actorType: ActorType.Pickup,
   takes: {  
@@ -98,14 +98,11 @@ static COLLECTIBLES_ANIMATION_DATA = Object.freeze({
       fps: 6,
       maxLoopCount: -1, //-1 = always, 0 = run once, N = run N times
       startCellIndex: 0,
-      endCellIndex: 4,
-      boundingBoxDimensions: new Vector2(30, 35), 
+      endCellIndex: 1,
+      boundingBoxDimensions: new Vector2(32, 26), 
       cellData: [
-        new Rect(3, 138, 30, 35),
-        new Rect(39, 138, 30, 35),
-        new Rect(76, 138, 30, 35),
-        new Rect(112, 138, 30, 35),
-        new Rect(148, 138, 30, 35)
+        new Rect(330, 20, 38, 30), 
+        new Rect(361, 20, 25, 30)
       ]
     },
     "gold_glint" :  {
