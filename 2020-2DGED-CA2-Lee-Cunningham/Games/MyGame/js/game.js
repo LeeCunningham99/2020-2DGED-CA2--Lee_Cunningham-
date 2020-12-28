@@ -113,10 +113,10 @@ function LoadDebug(bDebugEnabled) {
 //stores object manager which holds all sprites
 
 const cueArray = [
-  new AudioCue("coin_pickup", 1, 1, false, 1),
+  new AudioCue("pickup", 1, 1, false, 1),
   new AudioCue("gameover", 1, 1, false, 1),
-  new AudioCue("gunshot", 1, 1, false, 0),
-  new AudioCue("background", 0.6, 1, true, 0),
+  new AudioCue("jumpSound", 1, 1, false, 0),
+  new AudioCue("backgroundMusic", 0.6, 1, true, 0),
   //add more cues here but make sure you load in the HTML!
 ];
 
@@ -176,7 +176,7 @@ function StartGame(gameTime) {
   objectManager.StatusType = StatusType.Drawn | StatusType.Updated;
 
   //play sound
-  soundManager.Play("background");
+  soundManager.Play("backgroundMusic");
 }
 
 function LoadSprites() {

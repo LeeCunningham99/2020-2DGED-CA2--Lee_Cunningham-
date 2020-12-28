@@ -179,7 +179,7 @@ class PlayerController {
 
       //add your code here...
       //set take to "player_jump"
-      soundManager.Play("gunshot"); //obviously we would source and load an appropriate "jump" sound here
+      soundManager.Play("jumpSound"); //obviously we would source and load an appropriate "jump" sound here
     }
   }
 
@@ -207,7 +207,7 @@ class PlayerController {
           score += 10;
 
           //play a sound
-          soundManager.Play("coin_pickup");
+          soundManager.Play("pickup");
 
           //remove the pickup
           objectManager.Remove(sprite);
