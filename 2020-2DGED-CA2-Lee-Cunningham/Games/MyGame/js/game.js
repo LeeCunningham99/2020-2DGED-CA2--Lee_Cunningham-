@@ -245,9 +245,11 @@ function LoadPlayerSprite() {
 function LoadPickupSprites() {
   //to add lots of pickups we can also just create a local array of positions for the pickups
   let pickTranslationArray = [
-    new Vector2(450, 525),
-    new Vector2(525, 525),
-    new Vector2(725, 425),
+    new Vector2(395, 633),
+    new Vector2(520, 538),
+    new Vector2(720, 438),
+    new Vector2(270, 490),
+    new Vector2(70,588),
   ];
 
   //set the take name for the animation - we could change to "gold_glint" easily
