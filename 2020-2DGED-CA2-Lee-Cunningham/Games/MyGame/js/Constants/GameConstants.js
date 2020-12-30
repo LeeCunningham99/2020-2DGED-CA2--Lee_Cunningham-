@@ -146,7 +146,7 @@ static PLATFORM_DATA = Object.freeze({
     new Vector2(300, 645),
     new Vector2(375, 645),
 
-    new Vector2(450, 600),
+    new Vector2(450, 625),
     new Vector2(500, 550),
     new Vector2(550, 550),  
 
@@ -158,12 +158,12 @@ static PLATFORM_DATA = Object.freeze({
     new Vector2(900, 600),
     new Vector2(950, 550),
 
-    new Vector2(350, 500),
-    new Vector2(300, 400),
+    new Vector2(325, 450),
+    new Vector2(375, 500),
     new Vector2(250, 500),
+    new Vector2(100, 550),
     new Vector2(175, 500),
-    new Vector2(50, 400),
-    new Vector2(50, 600),
+    new Vector2(50, 650),
 
 
     //Floor so the player doesn't fall off the screen
