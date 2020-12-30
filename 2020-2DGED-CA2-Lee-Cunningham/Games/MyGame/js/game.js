@@ -253,7 +253,7 @@ function LoadPickupSprites() {
   ];
 
   //set the take name for the animation - we could change to "gold_glint" easily
-  var takeName = "ruby_glint";
+  var takeName = "ice_crystal";
 
   //loop through the translation array
   for (var translation of pickTranslationArray) {

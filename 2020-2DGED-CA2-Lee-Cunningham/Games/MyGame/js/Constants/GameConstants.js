@@ -94,7 +94,7 @@ static COLLECTIBLES_ANIMATION_DATA = Object.freeze({
         new Rect(331, 138, 30, 35)
       ]
     },
-    "ruby_glint" :  {
+    "ice_crystal" :  {
       fps: 6,
       maxLoopCount: -1, //-1 = always, 0 = run once, N = run N times
       startCellIndex: 0,
