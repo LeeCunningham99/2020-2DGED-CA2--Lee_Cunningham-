@@ -1,12 +1,10 @@
 /***************************************** Sprite Sheet Position & Animation Data ************************************************************************************************/
 
-/**
- * Class to store together all sprite data for space invaders
- */
 class SpriteData {
 
 //#region Sprite Data
 static RUNNER_START_POSITION = new Vector2(90, 660);
+static ENEMY_START_POSITION = new Vector2(850, 450);
 static RUNNER_MOVE_KEYS = [Keys.A, Keys.D, Keys.Space, Keys.Enter];
 static RUNNER_RUN_VELOCITY = 0.1;
 static RUNNER_JUMP_VELOCITY = 0.5;
@@ -56,10 +54,11 @@ static RUNNER_ANIMATION_DATA = Object.freeze({
 
 static ENEMY_ANIMATION_DATA = Object.freeze({
   id: "enemy_animation_data",
-  spriteSheet: document.getElementById("spritesheet_snowy"),
+  spriteSheet: document.getElementById("spritesheet_main"),
+  actorType: ActorType.Enemy,
   alpha: 1,
   takes: {  
-    "snowman" :  {    
+    "wasp_fly" :  {    
       fps: 16,
       maxLoopCount: -1, //-1 = always, 0 = run once, N = run N times
       startCellIndex: 0,
