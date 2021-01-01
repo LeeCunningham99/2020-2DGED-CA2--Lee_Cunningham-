@@ -383,11 +383,13 @@ function LoadPlatformSprites() {
   }
 }
 
+/*** 
+var pauseGame = PlayerController.pauseGame;
 
 var isPaused = false;
-document.addEventListener('keyup', function(e)
+document.addMouseListener('click', function(e)
 {
-  if(e.which ===27)
+  if(e.which ===msl)
   {
   if(isPaused) resumeGame();
   else pauseGame();
@@ -415,6 +417,7 @@ function resumeGame()
   canvas.style.opacity = 1;
   interval = setInterval(runGame, 20);
 }
+**/
 
 
 

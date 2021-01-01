@@ -127,7 +127,10 @@ class PlayerController {
    * @param {*} parent
    * @memberof PlayerController
    */
-  HandleMouse(gameTime, parent) {}
+  HandleMouse(gameTime, parent) 
+  {
+    }
+          
 
     /**
    * Add code in the method to listen for keyboard input and do something in the game
