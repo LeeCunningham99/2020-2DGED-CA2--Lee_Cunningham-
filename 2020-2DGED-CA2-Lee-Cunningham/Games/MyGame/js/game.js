@@ -179,6 +179,7 @@ function StartGame(gameTime) {
   soundManager.Play("backgroundMusic");
 }
 
+
 function LoadSprites() {
   LoadPlayerSprite();
   LoadPlatformSprites();
@@ -382,9 +383,40 @@ function LoadPlatformSprites() {
   }
 }
 
-function LoadEnemySprites() {
-  //to do...
+
+var isPaused = false;
+document.addEventListener('keyup', function(e)
+{
+  if(e.which ===27)
+  {
+  if(isPaused) resumeGame();
+  else pauseGame();
+  }
+}),
+
+  
+function pauseGame()
+{
+    clearInterval(interval);
+    isPaused = true;
+    canvas.style.opacity = 0.5;
+    canvasContext.font = "90px orbiton";
+    canvasContext.fillStyle = "white"
+    canvasContext.textAlign = "center";
+    canvasContext.textBaseline = "middle";
+    canvasContext.fillText("Game Paused", 400, 250);
+  }
+
+
+function resumeGame()
+{
+  isPaused = false;
+  canvasContext.clearRect(0, 0, canvas.width, canvas.height);
+  canvas.style.opacity = 1;
+  interval = setInterval(runGame, 20);
 }
+
+
 
 //#region DEMO - REMOVE LATER
 /***************************************DEMO FUNCTIONS ***************************************/

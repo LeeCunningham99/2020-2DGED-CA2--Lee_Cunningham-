@@ -56,10 +56,10 @@ static RUNNER_ANIMATION_DATA = Object.freeze({
 
 static ENEMY_ANIMATION_DATA = Object.freeze({
   id: "enemy_animation_data",
-  spriteSheet: document.getElementById("spritesheet_main"),
+  spriteSheet: document.getElementById("spritesheet_snowy"),
   alpha: 1,
   takes: {  
-    "wasp_fly" :  {    
+    "snowman" :  {    
       fps: 16,
       maxLoopCount: -1, //-1 = always, 0 = run once, N = run N times
       startCellIndex: 0,
