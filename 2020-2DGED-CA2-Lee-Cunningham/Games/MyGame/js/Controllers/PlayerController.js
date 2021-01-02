@@ -4,52 +4,51 @@
  * @version 1.0
  * @class PlayerController
  */
-class PlayerController {
-  //#region Static Fields
-  //#endregion
-
-  //#region Fields
-  //#endregion
-
-  //#region Properties
-  //#endregion
-
-  constructor(moveKeys, runVelocity, jumpVelocity) {
+class PlayerController 
+{
+  constructor(moveKeys, runVelocity, jumpVelocity) 
+  {
     this.moveKeys = moveKeys;
     this.runVelocity = runVelocity;
     this.jumpVelocity = jumpVelocity;
   }
 
   //#region Core Methods - doesnt need to change
-  Execute(gameTime, parent) {
+  Execute(gameTime, parent) 
+  {
     this.HandleInput(gameTime, parent);
     this.ApplyForces(parent);
     this.CheckCollisions(parent);
     this.ApplyInput(parent);
   }
 
-  HandleInput(gameTime, parent) {
+  HandleInput(gameTime, parent) 
+  {
     this.HandleMove(gameTime, parent);
     this.HandleJump(gameTime, parent);
     this.HandleMouse(gameTime, parent);
     this.HandleKeyboard(gameTime, parent);
   }
 
-  ApplyForces(parent) {
+  ApplyForces(parent) 
+  {
     parent.Body.ApplyGravity();
     parent.Body.ApplyFriction();
   }
 
-  CheckCollisions(parent) {
+  CheckCollisions(parent) 
+  {
     parent.Body.IsOnGround = false;
     this.HandlePlatformCollision(parent);
     this.HandleEnemyCollision(parent);
     this.HandlePickupCollision(parent);
   }
 
-  ApplyInput(parent) {
+  ApplyInput(parent) 
+  {
     //if on the ground then dont apply any Y velocity
-    if (parent.Body.IsOnGround) {
+    if (parent.Body.IsOnGround) 
+    {
       parent.Body.SetVelocityY(0);
     }
 
@@ -71,11 +70,14 @@ class PlayerController {
     );
   }
 
-  HandlePlatformCollision(parent) {
+  HandlePlatformCollision(parent) 
+  {
     let sprites = objectManager.Find(ActorType.Platform);
 
-    if (sprites) {
-      for (let i = 0; i < sprites.length; i++) {
+    if (sprites) 
+    {
+      for (let i = 0; i < sprites.length; i++) 
+      {
         let sprite = sprites[i];
 
         let collisionLocationType = Collision.GetIntersectsLocation(
@@ -88,38 +90,36 @@ class PlayerController {
           collisionLocationType === CollisionLocationType.Right
         ) {
           parent.Body.SetVelocityX(0);
-        } else if (collisionLocationType === CollisionLocationType.Bottom) {
+        } 
+        else if (collisionLocationType === CollisionLocationType.Bottom) 
+        {
           parent.Body.IsOnGround = true;
           parent.Body.IsJumping = false;
-        } else if (collisionLocationType === CollisionLocationType.Top) {
+        } 
+        else if (collisionLocationType === CollisionLocationType.Top) 
+        {
           parent.Body.SetVelocityY(1);
         }
       }
     }
   }
-
-  //#endregion
-
-  //#region Common Methods - Equals, ToString, Clone
-  Equals(other) {
+  Equals(other)
+  {
     //to do...
     throw "Not Yet Implemented";
   }
 
-  ToString() {
+  ToString() 
+  {
     //to do...
     throw "Not Yet Implemented";
   }
 
-  Clone() {
+  Clone() 
+  {
     //to do...
     throw "Not Yet Implemented";
   }
-  //#endregion
-
-  //#region Your Game Specific Methods - add code for more CD/CR or input handling
-
-
   /**
    * Add code in the method to listen for mouse input and do something in the game
    *
@@ -131,8 +131,6 @@ class PlayerController {
   {
     
     }
-          
-
     /**
    * Add code in the method to listen for keyboard input and do something in the game
    *
@@ -140,8 +138,10 @@ class PlayerController {
    * @param {*} parent
    * @memberof PlayerController
    */
-  HandleKeyboard(gameTime, parent) {}
+  HandleKeyboard(gameTime, parent) 
+  {
 
+  }
   /**
    * Change the names of the takes in this method to suit the take names in your game
    *
@@ -149,19 +149,22 @@ class PlayerController {
    * @param {*} parent
    * @memberof PlayerController
    */
-  HandleMove(gameTime, parent) {
+  HandleMove(gameTime, parent) 
+  {
     //if left or right key pressed and player is on the ground then add/remove move velocity
-    if (keyboardManager.IsKeyDown(this.moveKeys[0])) {
+    if (keyboardManager.IsKeyDown(this.moveKeys[0])) 
+    {
       parent.Body.AddVelocityX(-this.runVelocity * gameTime.ElapsedTimeInMs);
       //add your code here...
       parent.Artist.SetTake("run_left");
-    } else if (keyboardManager.IsKeyDown(this.moveKeys[1])) {
+    } 
+    else if (keyboardManager.IsKeyDown(this.moveKeys[1])) 
+    {
       parent.Body.AddVelocityX(this.runVelocity * gameTime.ElapsedTimeInMs);
       //add your code here...
       parent.Artist.SetTake("run_right");
     }
   }
-
   /**
    * Change the code in this method to play a particular sound when the player jumps
    * and (optionally) change the animation
@@ -170,7 +173,8 @@ class PlayerController {
    * @param {*} parent
    * @memberof PlayerController
    */
-  HandleJump(gameTime, parent) {
+  HandleJump(gameTime, parent) 
+  {
     //if jump key is pressed and player is not jumping and on the ground then jump
     if (
       keyboardManager.IsKeyDown(this.moveKeys[2]) &&
@@ -186,7 +190,6 @@ class PlayerController {
       soundManager.Play("jumpSound"); //obviously we would source and load an appropriate "jump" sound here
     }
   }
-
   /**
    * Change the code in this method to play a particular sound when the player collects
    * a pickup, update the score based on the pickup ID, and possibly play a celebration 
@@ -196,15 +199,19 @@ class PlayerController {
    * @param {*} parent
    * @memberof PlayerController
    */
-  HandlePickupCollision(parent) {
+  HandlePickupCollision(parent) 
+  {
     let sprites = objectManager.Find(ActorType.Pickup);
 
-    if (sprites) {
-      for (let i = 0; i < sprites.length; i++) {
+    if (sprites) 
+    {
+      for (let i = 0; i < sprites.length; i++) 
+      {
         let sprite = sprites[i];
 
         //we can use simple collision check here (i.e. Intersects) because dont need to think was it top, bottom, left, or right
-        if (Collision.Intersects(parent, sprite)) {
+        if (Collision.Intersects(parent, sprite)) 
+        {
           //add your code here...
 
           //add to the score
@@ -219,7 +226,6 @@ class PlayerController {
       }
     }
   }
-
   /**
    * Change the code in this method to play a particular sound when the player 
    * collides with the enemy, or remove the enemy, or kill the player and change
@@ -231,18 +237,21 @@ class PlayerController {
    * @param {*} parent
    * @memberof PlayerController
    */
-  HandleEnemyCollision(parent) {
+  HandleEnemyCollision(parent) 
+  {
     let sprites = objectManager.Find(ActorType.Enemy);
 
-    if (sprites) {
-      for (let i = 0; i < sprites.length; i++) {
+    if (sprites) 
+    {
+      for (let i = 0; i < sprites.length; i++) 
+      {
         let sprite = sprites[i];
 
-        if (Collision.Intersects(parent, sprite)) {
+        if (Collision.Intersects(parent, sprite)) 
+        {
           lives -=1;
         }
       }
     }
   }
-  //#endregion
 }

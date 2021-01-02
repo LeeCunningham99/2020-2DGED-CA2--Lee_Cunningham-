@@ -1,6 +1,7 @@
 /***************************************** Sprite Sheet Position & Animation Data ************************************************************************************************/
 
-class SpriteData {
+class SpriteData
+{
 
 //#region Sprite Data
 static RUNNER_START_POSITION = new Vector2(90, 660);
@@ -20,7 +21,7 @@ static RUNNER_ANIMATION_DATA = Object.freeze({
       maxLoopCount: -1, //-1 = always, 0 = run once, N = run N times
       startCellIndex: 0,
       endCellIndex: 5,
-      boundingBoxDimensions: new Vector2(40, 60), //notice I choose the largest of all the widths taken from the cellData array below
+      boundingBoxDimensions: new Vector2(40, 60), 
       cellData: [
         new Rect(30, 110, 50, 70),
         new Rect(95, 110, 50, 70),
@@ -39,7 +40,7 @@ static RUNNER_ANIMATION_DATA = Object.freeze({
       maxLoopCount: -1, //-1 = always, 0 = run once, N = run N times
       startCellIndex: 0,
       endCellIndex: 5,
-      boundingBoxDimensions: new Vector2(40, 60), //notice I choose the largest of all the widths taken from the cellData array below
+      boundingBoxDimensions: new Vector2(40, 60), 
       cellData: [
         new Rect(30, 195, 50, 70),
         new Rect(95, 195, 50, 70),
@@ -72,27 +73,12 @@ static ENEMY_ANIMATION_DATA = Object.freeze({
     }
   }
 });
-
 static COLLECTIBLES_ANIMATION_DATA = Object.freeze({
   id: "collectibles_animation_data",
   spriteSheet: document.getElementById("spritesheet_snowy"),
   alpha: 1,
   actorType: ActorType.Pickup,
   takes: {  
-    "sapphire_glint" :  {
-      fps: 6,
-      maxLoopCount: -1, //-1 = always, 0 = run once, N = run N times
-      startCellIndex: 0,
-      endCellIndex: 4,
-      boundingBoxDimensions: new Vector2(46, 50), 
-      cellData: [
-        new Rect(185, 138, 30, 35),
-        new Rect(220, 138, 30, 35),
-        new Rect(258, 138, 30, 35),
-        new Rect(294, 138, 30, 35),
-        new Rect(331, 138, 30, 35)
-      ]
-    },
     "ice_crystal" :  {
       fps: 6,
       maxLoopCount: -1, //-1 = always, 0 = run once, N = run N times
@@ -104,21 +90,8 @@ static COLLECTIBLES_ANIMATION_DATA = Object.freeze({
         new Rect(361, 20, 25, 30)
       ]
     },
-    "gold_glint" :  {
-      fps: 6,
-      maxLoopCount: -1, //-1 = always, 0 = run once, N = run N times
-      startCellIndex: 0,
-      endCellIndex: 2,
-      boundingBoxDimensions: new Vector2(30, 30), 
-      cellData: [
-        new Rect(65, 540, 30, 30),
-        new Rect(96, 540, 30, 30),
-        new Rect(128, 540, 30, 30)
-      ]
-    }
   }
 });
-
 //Snowy block
 static PLATFORM_DATA = Object.freeze({
   id: "platform",
@@ -164,7 +137,6 @@ static PLATFORM_DATA = Object.freeze({
     new Vector2(175, 500),
     new Vector2(50, 650),
 
-
     //Floor so the player doesn't fall off the screen
     new Vector2(0, 765),
     new Vector2(39, 765),
@@ -195,7 +167,6 @@ static PLATFORM_DATA = Object.freeze({
     new Vector2(1014, 765),
   ]
 });
-
 static BACKGROUND_DATA = [
   {
     id: "background_1",
@@ -211,7 +182,6 @@ static BACKGROUND_DATA = [
     layerDepth: 1,
     scrollSpeedMultiplier: 0.2
   },
-
   {
   id: "background_2",
     spriteSheet: document.getElementById("background2"),
@@ -226,7 +196,6 @@ static BACKGROUND_DATA = [
     layerDepth: 1,
     scrollSpeedMultiplier: 0.2
   },
-
   {
     id: "background_3",
       spriteSheet: document.getElementById("background3"),
@@ -241,7 +210,6 @@ static BACKGROUND_DATA = [
       layerDepth: 1,
       scrollSpeedMultiplier: 0.2
     },
-
     {
       id: "background_4",
         spriteSheet: document.getElementById("background4"),
@@ -256,7 +224,6 @@ static BACKGROUND_DATA = [
         layerDepth: 1,
         scrollSpeedMultiplier: 0.2
       },
-
       {
         id: "background_5",
           spriteSheet: document.getElementById("background5"),
@@ -271,7 +238,6 @@ static BACKGROUND_DATA = [
           layerDepth: 1,
           scrollSpeedMultiplier: 0.2
         },
-
         {
           id: "background_6",
             spriteSheet: document.getElementById("background6"),
@@ -286,7 +252,6 @@ static BACKGROUND_DATA = [
             layerDepth: 1,
             scrollSpeedMultiplier: 0.2
           },
-
           {
             id: "background_7",
               spriteSheet: document.getElementById("background7"),
@@ -301,7 +266,6 @@ static BACKGROUND_DATA = [
               layerDepth: 1,
               scrollSpeedMultiplier: 0.2
             },
-
             {
               id: "background_8",
                 spriteSheet: document.getElementById("background8"),
