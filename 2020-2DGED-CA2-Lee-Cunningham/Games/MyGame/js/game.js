@@ -179,6 +179,37 @@ function StartGame(gameTime) {
   soundManager.Play("backgroundMusic");
 }
 
+function PauseGame()
+{
+  Event.addMouseListener('click', function(e)
+{
+  if(e.which ===msl)
+  {
+    objectManager.StatusType = StatusType.Drawn | StatusType.Paused;
+  }
+  else
+  {
+    objectManager.StatusType = StatusType.Drawn | StatusType.Drawn;
+  }
+}
+  
+  )}
+
+  Draw(gameTime)
+  {
+    if((this.StatusType & StatusType.Drawn) != 0)
+    {
+      for (let key in this.sprites) 
+      {
+        for (let sprite of this.sprites[key])
+        {
+          if(screenBounds.Intersects(sprite.collisionPrimitive.GetBoundPrimitive()))
+                sprite.Draw(gameTime);
+                objectManager.StatusType = StatusType.Drawn | StatusType.Paused;
+        }
+      }
+    }
+  }
 
 function LoadSprites() {
   LoadPlayerSprite();
