@@ -316,9 +316,5 @@ static BACKGROUND_DATA = [
                 layerDepth: 1,
                 scrollSpeedMultiplier: 0.2
               }
-
-  
 ];
-//#endregion
-
 }

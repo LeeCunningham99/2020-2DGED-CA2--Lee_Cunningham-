@@ -120,7 +120,7 @@ const cueArray = [
   //add more cues here but make sure you load in the HTML!
 ];
 
-var lives = 5;
+var lives = 2;
 var score = 0;
 //#endregion
 
@@ -163,7 +163,7 @@ function StartGame(gameTime) {
   //set any win/lose variables
   var livesElement = document.getElementById("ui_lives");
   livesElement.style.display = "block";
-  livesElement.innerHTML = "<strike>hello</strike> - " + lives + "/5";
+  livesElement.innerHTML = "<strike>Lives</strike> - " + lives + "/2";
 
   var scoreElement = document.getElementById("ui_score");
   scoreElement.style.display = "block";
@@ -182,7 +182,7 @@ function StartGame(gameTime) {
 
 function LoadSprites() {
   LoadPlayerSprite();
-  LoadEnemySprites();
+  //LoadEnemySprites();
   LoadPlatformSprites();
   LoadBackgroundSprites();
   LoadPickupSprites();
@@ -409,9 +409,6 @@ function LoadPlatformSprites() {
   }
 }
 
-
-
-
 /*** 
 var pauseGame = PlayerController.pauseGame;
 
@@ -447,10 +444,3 @@ function resumeGame()
   interval = setInterval(runGame, 20);
 }
 **/
-
-
-
-//#region DEMO - REMOVE LATER
-/***************************************DEMO FUNCTIONS ***************************************/
-
-//#endregion
