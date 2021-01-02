@@ -238,7 +238,7 @@ class PlayerController {
         let sprite = sprites[i];
 
         if (Collision.Intersects(parent, sprite)) {
-          lives = lives -1;
+          lives -=1;
         }
       }
     }
