@@ -182,7 +182,7 @@ function StartGame(gameTime) {
 
 function LoadSprites() {
   LoadPlayerSprite();
-  //LoadEnemySprites();
+  LoadEnemySprite();
   LoadPlatformSprites();
   LoadBackgroundSprites();
   LoadPickupSprites();
