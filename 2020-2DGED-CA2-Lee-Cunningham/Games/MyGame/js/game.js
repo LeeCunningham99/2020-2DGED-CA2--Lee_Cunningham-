@@ -440,7 +440,7 @@ function LoadPlatformSprites() {
   }
 }
 
-/*** 
+
 var pauseGame = PlayerController.pauseGame;
 
 var isPaused = false;
@@ -474,4 +474,3 @@ function resumeGame()
   canvas.style.opacity = 1;
   interval = setInterval(runGame, 20);
 }
-**/
